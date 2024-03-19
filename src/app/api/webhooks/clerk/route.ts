@@ -62,6 +62,8 @@ export async function POST(req: Request) {
           imageUrl: payload.data.image_url,
         },
       });
+      // console.log('user created');
+      
       break;
     case "user.updated":
       const currentUser = prisma.user.findUnique({
