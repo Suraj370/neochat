@@ -7,6 +7,7 @@ export async function POST(req: Request) {
   //you can find this in the Clerk Dashboard -> Webhooks -> Choose the webhook
   const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
 
+
   if (!WEBHOOK_SECRET) {
     throw new Error(
       "Please addCLERK_WEBHOOK_SECRET from Clerk Dashboard to .env or .env.local"
