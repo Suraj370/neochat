@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real-Time Chat Application
 
-## Getting Started
+This is a real-time chat application built with Next.js, Pusher, and Clerk.
 
-First, run the development server:
+## Screenshots
+![image](https://github.com/user-attachments/assets/2abfcd55-b132-4f49-a26b-02adc98993b8)
+![image](https://github.com/user-attachments/assets/032d0e0d-adf9-4418-bfa5-b586ddd69d6a)
+![image](https://github.com/user-attachments/assets/f17285e1-4371-4574-a72d-c1732ae38b1f)
+
+
+
+## Features
+
+- Real-time messaging
+- User authentication
+- Modern, responsive UI
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Pusher](https://pusher.com/) - Real-time functionality
+- [Clerk](https://clerk.dev/) - User authentication
+- [TypeScript](https://www.typescriptlang.org/) - Type checking
+
+## Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+- Pusher account
+- Clerk account
+
+## Setup
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Suraj370/neochat.git
+cd neochat
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+Setup environment variables
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/sign-in
+CLERK_WEBHOOK_SECRET = 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME = 
 
-## Learn More
+NEXT_PUBLIC_PUSHER_APP_KEY = 
+PUSHER_APP_ID = 
+PUSHER_SECRET = 
 
-To learn more about Next.js, take a look at the following resources:
+# This was inserted by `prisma init`:
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+DATABASE_URL=""
+```
+Open http://localhost:3000 in your browser to see the application.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+This application can be easily deployed on platforms like Vercel or Netlify. Make sure to set up the environment variables in your deployment platform's settings.
+My deployment 
+https://suraj-neochat.netlify.app/
